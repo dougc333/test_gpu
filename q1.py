@@ -37,5 +37,4 @@ def main():
     print(prof.key_averages().table(sort_by="cpu_time_total", row_limit=10))
 
 if __name__ == "__main__":
-    print("cc")
     main()

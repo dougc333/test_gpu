@@ -1,12 +1,5 @@
 import torch.multiprocessing as mp
 import torch
-# Function for first process
-def print_hello():
-    print("Hello from Process 1!")
-
-# Function for second process
-def print_world():
-    print("Hello from Process 2!")
 
 def sender(queue):
     tensor = torch.tensor([1, 2, 3, 4, 5])  # Create a tensor

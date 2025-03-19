@@ -10,9 +10,7 @@ def producer(queue, num_tensors):
             queue.put(tensor)
 
 def main():
-    print("aa")
     mp.set_start_method("spawn", force=True)  # Required for  multiprocessing on some OS
-    print("a")
     queue = mp.SimpleQueue()  # Create a SimpleQueue
     num_tensors = 10  # Number of tensors to insert
 

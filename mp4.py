@@ -54,11 +54,11 @@ def init_process(rank, size, fn, backend='gloo'):
 if __name__ == "__main__":
     world_size = 2
     processes = []
-    if "google.colab" in sys.modules:
-        print("Running in Google Colab")
-        mp.get_context("spawn")
-    else:
-        mp.set_start_method("spawn")
+    # if "google.colab" in sys.modules:
+    #     print("Running in Google Colab")
+    #     mp.get_context("spawn")
+    # else:
+    mp.set_start_method("spawn")
     for rank in range(world_size):
         #p = mp.Process(target=init_process, args=(rank, world_size, run_blocking) 
         #p = mp.Process(target=init_process, args=(rank, world_size, run_nonblocking))
