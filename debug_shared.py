@@ -8,6 +8,7 @@ def debug():
   device = torch.device("cpu")
   t = torch.ones(3, device=device)
   s0 = t.untyped_storage()
+  print(s0)
   print(s0.data_ptr())
 
 
