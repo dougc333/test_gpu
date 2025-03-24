@@ -1,0 +1,18 @@
+[
+  {
+    "rank": 0,
+    "device": "cuda:0",
+    "step": 35,
+    "loss": 0.7574806809425354,
+    "sync_time": 0.058420287370681764,
+    "hostname": "dcs-MacBook-Pro.local"
+  },
+  {
+    "rank": 1,
+    "device": "cuda:1",
+    "step": 35,
+    "loss": 1.4393161535263062,
+    "sync_time": 0.053610562682151794,
+    "hostname": "dcs-MacBook-Pro.local"
+  }
+]
