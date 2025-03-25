@@ -1,0 +1,33 @@
+Region: us-east-1
+
+Image:
+  Os: ubuntu2204
+
+SharedStorage:
+  - MountDir: /shared
+    Name: shared-fs
+    StorageType: FsxLustre
+    FsxLustreSettings:
+      StorageCapacity: 100
+      DeploymentType: SCRATCH_1
+      StorageType: SSD
+
+HeadNode:
+  InstanceType: g4dn.xlarge
+  Networking:
+    SubnetId: subnet-xxxxxxx
+  Ssh:
+    KeyName: g4.pem
+
+Scheduling:
+  Scheduler: slurm
+  SlurmQueues:
+  - Name: train
+    ComputeResources:
+    - Name: g4dnlarge
+      InstanceType: g4dn.xlarge
+      MinCount: 0
+      MaxCount: 2
+    Networking:
+      SubnetIds:
+      - subnet-xxxxxxx
