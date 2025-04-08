@@ -33,3 +33,4 @@ headnode is separate? use a t2 instance?
 
 minGPT repo karpathy
 
+https://www.youtube.com/watch?v=3XUG7cjte2U
